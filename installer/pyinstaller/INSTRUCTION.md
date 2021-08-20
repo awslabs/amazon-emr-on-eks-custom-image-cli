@@ -1,7 +1,7 @@
 # Installer Use Guide
 
 ### Build Installer for Linux
-The build script for linux is tested on `quay.io/pypa/manylinux2014_x86_64`.
+The build script for linux is tested on Amazon Linux 2.
 
 ```
 cd <Path to the Source Code>
