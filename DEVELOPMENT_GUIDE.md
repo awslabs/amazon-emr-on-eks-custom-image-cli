@@ -1,4 +1,4 @@
-#Amazon EMR on EKS Custom Image CLI Development Guide
+# Amazon EMR on EKS Custom Image CLI Development Guide
 
 This guide will help you set up your development environment for testing and contributing to custom image validation tool.
 If you found something is missing or inaccurate, update this guide and send a Pull Request.
