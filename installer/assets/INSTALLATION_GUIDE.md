@@ -1,6 +1,6 @@
 ### Installation Guide
 
-####Install on Linux and Mac
+#### Install on Linux and Mac
 
 For Mac users, please unblock the exec file first before installation.
 
@@ -46,7 +46,7 @@ sudo rm /usr/local/bin/emr-on-eks-custom-image
 sudo rm -rf /usr/local/amazon-emr-on-eks-custom-image-cli
 ```
 
-####Install on Windows
+#### Install on Windows
 
 1. Install Amazon EMR on EKS Custom Image CLI using MSI Installer.
 2. Run the tool
