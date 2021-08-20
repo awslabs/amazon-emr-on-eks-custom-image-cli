@@ -1,5 +1,5 @@
-#Amazon EMR on EKS Custom Image CLI
-##Introduction
+# Amazon EMR on EKS Custom Image CLI
+## Introduction
 [Amazon EMR](https://aws.amazon.com/emr/) on [Amazon EKS](https://aws.amazon.com/eks/) provides support for
 Custom Images, a capability that enables you to customize the Docker container images used for running
 Apache Spark applications on [Amazon EMR on EKS](https://aws.amazon.com/emr/features/eks/).
