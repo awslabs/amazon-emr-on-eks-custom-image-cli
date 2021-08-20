@@ -2,6 +2,12 @@
 
 #### Install on Linux and Mac
 
+Download the latest zip releases below:
+
+1. [MacOS Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.00/amazon-emr-on-eks-custom-image-cli-mac-v1.00.zip)
+
+2. [Linux Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.00/amazon-emr-on-eks-custom-image-cli-linux-v1.00.zip)
+
 For Mac users, please unblock the exec file first before installation.
 
 Use command: 
@@ -47,6 +53,8 @@ sudo rm -rf /usr/local/amazon-emr-on-eks-custom-image-cli
 ```
 
 #### Install on Windows
+
+Download the latest [Windows Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.00/amazon-emr-on-eks-custom-image-cli-windows-v1.00.msi)
 
 1. Install Amazon EMR on EKS Custom Image CLI using MSI Installer.
 2. Run the tool
