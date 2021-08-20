@@ -1,6 +1,6 @@
 #!/bin/sh
 binary_zip_filename=$1
-python_version=$3
+python_version=$2
 
 if [ "$python_version" = "" ]; then
     python_version="3.7.9";
@@ -22,7 +22,7 @@ cd .build_linux
 echo "Copying Source"
 cp -r ../[!.]* ./src
 cd src
-rm Makefile
+rm -f Makefile
 cd ..
 cp -r ./src/* ./output/amazon-emr-on-eks-custom-image-test-src
 
