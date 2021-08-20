@@ -1,44 +1,62 @@
-#Amazon EMR on EKS Custom Image CLI
-##Introduction
-[Amazon EMR](https://aws.amazon.com/emr/) on [Amazon EKS](https://aws.amazon.com/eks/) provides support for
-Custom Images, a capability that enables you to customize the Docker container images used for running
-Apache Spark applications on [Amazon EMR on EKS](https://aws.amazon.com/emr/features/eks/).
-Custom images enables you to install and configure packages specific to your workload that are not available
-in the public distribution of EMR’s Spark runtime into a single immutable container. An immutable container
-promotes portability and simplifies dependency management for each workload and enables you to integrate
-developing applications for EMR on EKS with your own continuous integration (CI) pipeline.
+#Amazon EMR on EKS Custom Image CLI Development Guide
 
-To test the compatibility of the modifications made to your EMR base image, we are providing a utility to validate 
-the image’s file structure. The utility will examine basic required arguments and ensure that the modifications work as 
-expected and prevent job failures due to common misconfigurations. This tool can be integrated into your Continuous 
-Integration (CI) pipeline when you are building your image. For more information about customizing the EMR on EKS base 
-image, see our [documentation](https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/docker-custom-images.html).
+This guide will help you set up your development environment for testing and contributing to custom image validation tool.
+If you found something is missing or inaccurate, update this guide and send a Pull Request.
 
+## Get Source Code
 
-## For Developers
-Developers who wish to develop on or contribute to the source code, please refer to [Contribution Guide](CONTRIBUTING.md) and [Development Guide](DEVELOPMENT_GUIDE.md).
+Pull source code from Github repository.
 
-## Getting Started
-
+## Environment Set Up
 ### Prerequisite
 Before running this tool, please make sure you have Docker CLI installed.
 
-#### Install Docker CLI (Optional).
+### Install Docker CLI (Optional).
 
-This tool utilizes [Docker CLI](https://docs.docker.com/get-docker/) to help validate custom images.
+This tool utilizes [Docker CLI](https://docs.docker.com/docker-for-mac/install/) to help validate custom images.
 Please make sure you have Docker CLI installed prior to using the tool.
 
-### Installation
+### Create Virtual Environment
+To avoid messing up with global python environment, create a virtual environment for this tool
+under current folder:
 
-Please follow the Installation Guide [here](installer/assets/INSTALLATION_GUIDE.md).
+```python3 -m venv <venv>```
 
-### Usage
+*Note: You can change the path for you virtual env to whatever you want, but be careful of the slight difference of
+the path in Mac and Windows.*
 
-#### Validate Custom Image
+To activate/deactivate virtual environment, run following command:
 
-Use command:
+* For Mac/Unix Users, run ```source <venv>/bin/activate```
+
+* For Windows Users, run ```C:\> <venv>\Scripts\activate.bat```
+
+To deactivate the venv, type in the shell: ``` deactivate ```.
+
+### Install Required Dependencies.
+
+To ensure that all the required dependencies are successfully installed, run:
 ```
-emr-on-eks-custom-image validate-image -i <image_name> -r <release_name> [-t <image_type>]
+pip3 install -r requirements.txt
+```
+
+### Set Python Path
+
+To avoid relative import error, set the Python path to current package folder:
+
+```export PYTHONPATH=$PATHONPATH:`pwd` ``` in linux/macOS
+
+or
+
+```set PYTHONPATH=<path to source code>``` in windows
+
+## Validate Custom Image
+In the root directory, you can directly use python3 command to run the validation tool.
+
+Then run command:
+
+```
+python3 custom_image_cli validate-image -i <image_name> -r <release_name> [-t <image_type>]
 ```
 
 -i specifies the local image URI that needs to be validated, this can be the image URI or any name/tag you defined for your image.
@@ -134,28 +152,6 @@ Custom Image Validation Failed. Please see individual test results above for det
 -----------------------------------------------------------------
 ```
 
-## Support
+## Unit Test
 
-This tool supports the following releases:
-
-|          Releases          | Amazon EMR on EKS release versions | Container image tags |
-|:--------------------------:|:----------------------------------:|:--------------------:|
-| Amazon EMR 6.3.0 releases  | emr-6.3.0-latest                   | emr-6.3.0:latest     |
-|                            | emr-6.3.0-20210429                 | emr-6.3.0:20210429   |
-| Amazon EMR 6.2.0 releases  | emr-6.2.0-latest                   | emr-6.2.0-20210129   |
-|                            | emr-6.2.0-20210129                 | emr-6.2.0-20210129   |
-|                            | emr-6.2.0-20201218                 | emr-6.2.0-20201218   |
-|                            | emr-6.2.0-20201201                 | emr-6.2.0-20201201   |
-| Amazon EMR 5.33.0 releases | emr-5.33.0-latest                  | emr-5.33.0-20210323  |
-|                            | emr-5.33.0-20210323                | emr-5.33.0-20210323  |
-| Amazon EMR 5.32.0 releases | emr-5.32.0-latest                  | emr-5.32.0-20210129  |
-|                            | emr-5.32.0-20210129                | emr-5.32.0-20210129  |
-|                            | emr-5.32.0-20201218                | emr-5.32.0-20201218  |
-|                            | emr-5.32.0-20201201                | emr-5.32.0-20201201  |
-
-You can find more release information [Here](https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/docker-custom-images-tag.html).
-
-## Security
-
-If you discover a potential security issue in this project, or think you may have discovered a security issue, we request you to notify AWS Security via our vulnerability [reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do not create a public GitHub issue.
-
+To run unit tests for this tool, you can use command `python3 -m unittest discover`.
