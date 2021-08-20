@@ -1,6 +1,6 @@
-#Installer Use Guide
+# Installer Use Guide
 
-###Build Installer for Linux
+### Build Installer for Linux
 The build script for linux is tested on `quay.io/pypa/manylinux2014_x86_64`.
 
 ```
@@ -8,16 +8,16 @@ cd <Path to the Source Code>
 ./installer/pyinstaller/build-linux.sh amazon-emr-on-eks-custom-image-cli-linux-x86_64.zip
 ```
 
-###Build Installer for macOS
+### Build Installer for macOS
 
 ```
 cd <Path to the Source Code>
 ./installer/pyinstaller/build-mac.sh amazon-emr-on-eks-custom-image-cli-mac-x86_64.zip
 ```
 
-###Build Executable for windows
+### Build Executable for windows
 
-####Build the .exe file.
+#### Build the .exe file.
 
 If you have python3 pre-installed:
 ```
