@@ -19,10 +19,10 @@ cd .build_mac
 echo "Copying Source"
 cp -r ../[!.]* ./src
 cd src
-rm -r scripts
-rm Makefile
-rm -r venv
-rm -r __pycache__
+rm -rf scripts
+rm -f Makefile
+rm -rf venv
+rm -rf __pycache__
 cd ..
 cp -r ./src/* ./output/amazon-emr-on-eks-custom-image-cli-src
 
