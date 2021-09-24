@@ -2,23 +2,15 @@
 
 #### Install on Linux and Mac
 
-Download the latest zip releases below:
-
-1. [MacOS Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.00/amazon-emr-on-eks-custom-image-cli-mac-v1.00.zip)
-
-2. [Linux Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.00/amazon-emr-on-eks-custom-image-cli-linux-v1.00.zip)
-
-For Mac users, please unblock the exec file first before installation.
-
-Use command: 
+1. Use Homebrew for Mac/Linux users:
 ```
-sudo xattr -d com.apple.quarantine dist/emr-on-eks-custom-image
+brew tap aws/tap
+brew install emr-on-eks-custom-image
 ```
-to remove quarantine attribute from the file.
+For Linux users, another option is to install using installation script:
 
-Or press ctrl + right click on the exec file to allow open it.
+Download the latest [Linux Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.00/amazon-emr-on-eks-custom-image-cli-linux-v1.00.zip)
 
-1. Install Amazon EMR on EKS Custom Image CLI
 ```
 sudo ./installation
 ```
@@ -34,6 +26,14 @@ Version: X.XX
 ```
 
 To Uninstall, follow:
+
+For Homebrew, run
+```
+brew uninstall emr-on-eks-custom-image
+```
+
+For installation script
+
 1. Find the symlink using which
 ```
 which emr-on-eks-custom-image
@@ -71,5 +71,5 @@ Version: X.XX
 To Uninstall, follow:
 
 1. From the Start menu, search for "Add or remove programs".
-   
+
 2. Select the entry named Amazon EMR on EKS Custom Image CLI and choose Uninstall to launch the uninstaller.
