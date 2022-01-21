@@ -6,5 +6,5 @@ yaml.add_constructor(ImageManifest.yaml_tag, ImageManifest.from_yaml)
 
 def load_yaml(file):
     with open(file, "r") as f:
-        image_manifest = yaml.load(f, Loader=yaml.Loader)
+        image_manifest = yaml.safe_load(f)
         return image_manifest

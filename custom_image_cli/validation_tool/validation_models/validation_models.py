@@ -3,6 +3,7 @@ import yaml
 
 class ImageManifest(yaml.YAMLObject):
     yaml_tag = u'!ImageManifest'
+    yaml_loader = yaml.SafeLoader
 
     # emr_releases: list['EmrRelease'], files_structures: list['FileStructure'], env_vars: list['EnvironmentVariable']
     def __init__(self, emr_releases, files_structures, env_vars):
@@ -32,6 +33,7 @@ class ImageManifest(yaml.YAMLObject):
 
 class EmrRelease(yaml.YAMLObject):
     yaml_tag = u'!EmrRelease'
+    yaml_loader = yaml.SafeLoader
 
     # release_name: str, images: list['ImageDetail']
     def __init__(self, release_name, images):
@@ -58,6 +60,7 @@ class EmrRelease(yaml.YAMLObject):
 
 class EnvironmentVariable(yaml.YAMLObject):
     yaml_tag = u'!EnvironmentVariable'
+    yaml_loader = yaml.SafeLoader
 
     # key: str, env_name: str, env_value: str
     def __init__(self, key, env_name, env_value):
@@ -87,6 +90,7 @@ class EnvironmentVariable(yaml.YAMLObject):
 
 class FileStructure(yaml.YAMLObject):
     yaml_tag = u'!FileStructure'
+    yaml_loader = yaml.SafeLoader
 
     # name: str, relative_location: str, file_prefixes: list[str]
     def __init__(self, name, relative_location, file_prefixes):
@@ -116,6 +120,7 @@ class FileStructure(yaml.YAMLObject):
 
 class ImageDetail(yaml.YAMLObject):
     yaml_tag = u'!ImageDetail'
+    yaml_loader = yaml.SafeLoader
 
     # image_type: str, manifest_config: 'ManifestConfig', env_vars: list[str], file_structures: list[str]
     def __init__(self, image_type, manifest_config, env_vars, file_structures):
@@ -148,6 +153,7 @@ class ImageDetail(yaml.YAMLObject):
 
 class ManifestConfig(yaml.YAMLObject):
     yaml_tag = u'!ManifestConfig'
+    yaml_loader = yaml.SafeLoader
 
     # entrypoint: str, user: str, working_dir: str
     def __init__(self, entrypoint, user, working_dir):
