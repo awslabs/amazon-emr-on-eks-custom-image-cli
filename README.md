@@ -140,6 +140,8 @@ This tool supports the following releases:
 
 |          Releases          | Amazon EMR on EKS release versions | Container image tags |
 |:--------------------------:|:----------------------------------:|:--------------------:|
+| Amazon EMR 6.5.0 releases  | emr-6.5.0-latest                   | emr-6.5.0:latest     |
+|                            | emr-6.5.0-20211119                 | emr-6.5.0:20211119   |
 | Amazon EMR 6.4.0 releases  | emr-6.4.0-latest                   | emr-6.4.0:latest     |
 |                            | emr-6.4.0-20210830                 | emr-6.4.0:20210830   |
 | Amazon EMR 6.3.0 releases  | emr-6.3.0-latest                   | emr-6.3.0:latest     |

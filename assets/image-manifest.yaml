@@ -100,6 +100,27 @@ EmrReleases:
       User: hadoop:hadoop
       WorkingDir: /home/hadoop
   ReleaseName: emr-6.4.0
+- !EmrRelease
+  Images:
+  - !ImageDetail
+    EnvironmentVariable:
+    - java_home
+    - spark_home
+    FileStructure:
+    - spark-jars
+    - hadoop-files
+    - hadoop-jars
+    - bin-files
+    - hadoop-files-6
+    - hadoop-jars-6
+    # there is no change in the list of jars from 6.4 to 6.5
+    - spark-jars-6-4
+    ImageType: spark
+    ManifestConfig: !ManifestConfig
+      Entrypoint: /usr/bin/entrypoint.sh
+      User: hadoop:hadoop
+      WorkingDir: /home/hadoop
+  ReleaseName: emr-6.5.0
 EnvironmentVariables:
 - !EnvironmentVariable
   EnvName: SPARK_HOME
