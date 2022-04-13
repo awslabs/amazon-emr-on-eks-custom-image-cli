@@ -150,6 +150,10 @@ This tool supports the following releases:
 |                            | emr-6.2.0-20210129                 | emr-6.2.0-20210129   |
 |                            | emr-6.2.0-20201218                 | emr-6.2.0-20201218   |
 |                            | emr-6.2.0-20201201                 | emr-6.2.0-20201201   |
+| Amazon EMR 5.35.0 releases | emr-5.35.0-latest                  | emr-5.35.0:latest    |
+|                            | emr-5.35.0-20220307                | emr-5.35.0:20220307  |
+| Amazon EMR 5.34.0 releases | emr-5.34.0-latest                  | emr-5.34.0:latest    |
+|                            | emr-5.34.0-20211208                | emr-5.34.0:20211208  |
 | Amazon EMR 5.33.0 releases | emr-5.33.0-latest                  | emr-5.33.0-20210323  |
 |                            | emr-5.33.0-20210323                | emr-5.33.0-20210323  |
 | Amazon EMR 5.32.0 releases | emr-5.32.0-latest                  | emr-5.32.0-20210129  |

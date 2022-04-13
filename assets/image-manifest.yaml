@@ -113,7 +113,6 @@ EmrReleases:
     - bin-files
     - hadoop-files-6
     - hadoop-jars-6
-    # there is no change in the list of jars from 6.4 to 6.5
     - spark-jars-6-4
     ImageType: spark
     ManifestConfig: !ManifestConfig
@@ -121,6 +120,50 @@ EmrReleases:
       User: hadoop:hadoop
       WorkingDir: /home/hadoop
   ReleaseName: emr-6.5.0
+- !EmrRelease
+  Images:
+  - !ImageDetail
+    EnvironmentVariable:
+    - java_home
+    - spark_home
+    FileStructure:
+    - spark-jars
+    - hadoop-files
+    - hadoop-jars
+    - bin-files
+    - hadoop-files-5
+    - hadoop-jars-5
+    - spark-jars-5-34
+    - hadoop-jars-5-34
+    - hadoop-files-5-34
+    ImageType: spark
+    ManifestConfig: !ManifestConfig
+      Entrypoint: /usr/bin/entrypoint.sh
+      User: hadoop:hadoop
+      WorkingDir: /home/hadoop
+  ReleaseName: emr-5.34.0
+- !EmrRelease
+  Images:
+  - !ImageDetail
+    EnvironmentVariable:
+    - java_home
+    - spark_home
+    FileStructure:
+    - spark-jars
+    - hadoop-files
+    - hadoop-jars
+    - bin-files
+    - hadoop-files-5
+    - hadoop-files-5-34
+    - hadoop-jars-5
+    - hadoop-jars-5-34
+    - spark-jars-5-34
+    ImageType: spark
+    ManifestConfig: !ManifestConfig
+      Entrypoint: /usr/bin/entrypoint.sh
+      User: hadoop:hadoop
+      WorkingDir: /home/hadoop
+  ReleaseName: emr-5.35.0
 EnvironmentVariables:
 - !EnvironmentVariable
   EnvName: SPARK_HOME
@@ -812,3 +855,79 @@ FileStructures:
   - stax
   Name: spark-jars-6-4
   RelativeLocation: /usr/lib/spark/jars
+- !FileStructure
+  FilePrefixes:
+  - jtransforms
+  - jackson-dataformat-cbor
+  - validation-api
+  - jackson-jaxrs
+  - xmlenc
+  - apache-log
+  - slf
+  - calcite-core
+  - jetty-sslengine
+  - oncrpc
+  - mssql-jdbc
+  - HikariCP-java
+  - jetty-util
+  - javax.ws.rs-api
+  - commons-digester
+  - apacheds-kerberos-codec
+  - py
+  - gmetric
+  - api-util
+  - lz
+  - parquet-hadoop-bundle
+  - hadoop-mapreduce-client-app
+  - stringtemplate
+  - calcite-avatica
+  - arrow-memory
+  - javax.annotation-api
+  - hppc
+  - eigenbase-properties
+  - apacheds-i
+  - snappy
+  - kubernetes-model
+  - hadoop-mapreduce-client-shuffle
+  - log
+  - metrics-ganglia
+  - xbean-asm
+  - jackson-xc
+  - jcl-over-slf
+  - hive-hcatalog-core
+  - jul-to-slf
+  - netlib-native_ref-osx-x
+  - netlib-native_system-osx-x
+  - stax
+  - jetty
+  - flatbuffers
+  - netty
+  - hk
+  - ST
+  - json
+  - api-asn
+  - jersey-guava
+  - JavaEWAH
+  - calcite-linq
+  Name: spark-jars-5-34
+  RelativeLocation: /usr/lib/spark/jars
+- !FileStructure
+  FilePrefixes:
+  - log
+  - stax
+  - jets
+  - slf
+  - api-asn
+  - apacheds-i
+  Name: hadoop-jars-5-34
+  RelativeLocation: /usr/lib/hadoop/lib
+- !FileStructure
+  FilePrefixes:
+  - libexec
+  - lib
+  - etc
+  - sbin
+  - client
+  - bin
+  Name: hadoop-files-5-34
+  RelativeLocation: /usr/lib/hadoop
