@@ -32,7 +32,7 @@ venv\Scripts\pip3.exe install pyinstaller
 echo "Building Binary"
 cd src
 echo "custom-image-validation-tool.spec content is:"
-..\venv\Scripts\python.exe -m PyInstaller -F --clean installer\pyinstaller\custom-image-validation-tool-win.spec
+..\venv\Scripts\python.exe -m PyInstaller --clean installer\pyinstaller\custom-image-validation-tool-win.spec
 
 mkdir pyinstaller-output
 mkdir pyinstaller-output\bin
