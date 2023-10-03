@@ -21,7 +21,7 @@ PyYAML~=6.0,>=6.0.1
 requests==2.31.0
 six==1.15.0
 toml==0.10.2
-urllib3==1.26.5
+urllib3==1.26.17
 wcwidth==0.2.5
 websocket-client==0.58.0
 zipp==3.5.0
