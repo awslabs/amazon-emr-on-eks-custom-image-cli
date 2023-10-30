@@ -137,14 +137,11 @@ Custom Image Validation Failed. Please see individual test results above for det
 ## Support
 
 This tool supports the following releases:
-
-**Note:
-The latest release v1.03 only supports versions for up to emr-6.6.0, while we support EMR images to the latest version in the repo. Release updates may be delayed.**
-
 Supported Versions in Repo:
 
 |          Releases          | Amazon EMR on EKS release versions | Container image tags |
 |:--------------------------:|:----------------------------------:|:--------------------:|
+| Amazon EMR 6.14.0 releases  | emr-6.14.0-latest                   | emr-6.14.0:latest     |
 | Amazon EMR 6.13.0 releases  | emr-6.13.0-latest                   | emr-6.13.0:latest     |
 | Amazon EMR 6.12.0 releases  | emr-6.12.0-latest                   | emr-6.12.0:latest     |
 | Amazon EMR 6.11.0 releases  | emr-6.11.0-latest                   | emr-6.11.0:latest     |
@@ -179,6 +176,14 @@ Supported Versions in [Releases](https://github.com/awslabs/amazon-emr-on-eks-cu
 
 |          Releases          | Amazon EMR on EKS release versions | Container image tags |
 |:--------------------------:|:----------------------------------:|:--------------------:|
+| Amazon EMR 6.14.0 releases  | emr-6.14.0-latest                   | emr-6.14.0:latest     |
+| Amazon EMR 6.13.0 releases  | emr-6.13.0-latest                   | emr-6.13.0:latest     |
+| Amazon EMR 6.12.0 releases  | emr-6.12.0-latest                   | emr-6.12.0:latest     |
+| Amazon EMR 6.11.0 releases  | emr-6.11.0-latest                   | emr-6.11.0:latest     |
+| Amazon EMR 6.10.0 releases  | emr-6.10.0-latest                   | emr-6.10.0:latest     |
+| Amazon EMR 6.9.0 releases  | emr-6.9.0-latest                   | emr-6.9.0:latest     |
+| Amazon EMR 6.8.0 releases  | emr-6.8.0-latest                   | emr-6.8.0:latest     |
+| Amazon EMR 6.7.0 releases  | emr-6.7.0-latest                   | emr-6.7.0:latest     |
 | Amazon EMR 6.6.0 releases  | emr-6.6.0-latest                   | emr-6.6.0:latest     |
 |                            | emr-6.6.0-20220411                 | emr-6.6.0:20220411   |
 | Amazon EMR 6.5.0 releases  | emr-6.5.0-latest                   | emr-6.5.0:latest     |
