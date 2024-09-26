@@ -9,7 +9,7 @@ brew install emr-on-eks-custom-image
 ```
 For Linux users, another option is to install using installation script:
 
-Download the latest [Linux Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.00/amazon-emr-on-eks-custom-image-cli-linux-v1.00.zip)
+Download the latest [Linux Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.06/amazon-emr-on-eks-custom-image-cli-linux-v1.06.zip)
 
 ```
 sudo ./installation
@@ -54,7 +54,7 @@ sudo rm -rf /usr/local/amazon-emr-on-eks-custom-image-cli
 
 #### Install on Windows
 
-Download the latest [Windows Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.00/amazon-emr-on-eks-custom-image-cli-windows-v1.00.msi)
+Download the latest [Windows Release](https://github.com/awslabs/amazon-emr-on-eks-custom-image-cli/releases/download/v1.06/amazon-emr-on-eks-custom-iamge-cli-v1.06.msi)
 
 1. Install Amazon EMR on EKS Custom Image CLI using MSI Installer.
 2. Run the tool
